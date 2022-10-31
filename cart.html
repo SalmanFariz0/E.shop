@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9afa0fa546.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="main">
+         <!-- Header -->
+         <header >
+            <!-- Nav bar -->
+            <nav id="nav-bar">
+                <div class="logo-container">
+                    <a href="home page.html">
+                      <h2>E.SHOP</h2>
+                    </a>
+
+                </div>
+                <div class="nav-links">
+                    <a href="home page.html#cloths">clothing</a>
+                    <a href="home page.html#accessories">accessories</a>
+
+                </div>
+
+            </nav>
+            <!-- Search box -->
+            <div class="search-bar">
+                <i  class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search" placeholder="Search here....">
+
+            </div>
+            <!-- Cart and account -->
+            <div class="my-account">
+                <div id="cart-container">
+                    <a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a>
+            
+                </div>
+                
+                <div id="profile-pic">
+
+                </div>
+                
+                
+
+            </div>
+            <!-- drop down -->
+            <div class="drop-down">
+                <div onclick="dropBtnClick()" class="drop-down-btn">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+               
+                
+
+            </div>
+
+
+
+
+
+        </header>
+        <div id="drop-down-menu">
+            <div class="drop-down-links">
+                <a href="home page.html#cloths">clothing</a>
+                <a href="home page.html#accessories">accessories</a>
+            </div>
+               
+           <div class="drop-down-account">
+               <div id="profile-pic">
+
+               </div>
+               <div id="cart-container">
+                <a href="cart.html"><i id="cart-icon" class="fa-solid fa-cart-shopping"></i></a>
+                  
+               </div>
+               
+               
+           </div>
+               
+               
+               
+       </div>
+    
+    <!-- Main section -->
+    <section id="main-section">
+        
+        <div class="cart-page-wrapper">
+          <!-- <h1 id="null-cart-text">No items in your bag!</h1> -->
+
+        </div>
+
+         
+        
+    </section>
+    <div class="cart-footer">
+        
+        <h2 >$<span class="sub-total">0</span></h2>
+        <button id="checkout-btn">Chekout</button>
+       
+       
+        
+    </div>
+
+    
+    
+ </div>
+ <!-- Modal -->
+ <div class="checkout-modal-container">
+    <div class="checkout-modal"> 
+            <div class="d-flex-wrapper">
+              <button id="close-btn">X</button>
+
+              <!-- Form -->
+              <form id="form" action="https://script.google.com/macros/s/AKfycbyDiUvBpH1vQA7fIoO8_WtTki8s05cyYZ0WplYYtdi2rywdyU1pS-mCws7GYXUJ9Zar/exec" method="post">
+                <div class="input-wrapper">
+                  <input type="text" id="fname" name="fname" placeholder="First name" required>
+                  <div class="form-error"></div>
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" id="lname" name="lname" placeholder="Last name">
+                  <div class="form-error"></div>
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" id="city" name="City" placeholder="City/Area" required>
+                  <div class="form-error"></div>
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" id="state" name="state" placeholder="State" required>
+                  <div class="form-error"></div>
+                </div>
+                <div class="input-wrapper">
+                  <input type="text" id="pin-num" name="pin" placeholder="Postal/Zip" required>
+                  <div class="form-error"></div>
+                </div>
+                <div class="input-wrapper">
+                  <input type="tel" id="phone-no" name="phone-no" placeholder="Phone number" required>
+                  <div class="form-error"></div>
+                </div>
+                <div class="input-wrapper">
+                  <input type="email" id="mail" name="mail" placeholder="Email address" required>
+                  <div class="form-error"></div>
+                </div>
+                
+              
+              <div class="Y-order">
+                <table>
+                  <tr>
+                    <th colspan="2">Your order</th>
+                  </tr>
+                  <tr>
+                    <td>Sub total</td>
+                    <td>$<span class="sub-total">0</span></td>
+                  </tr>
+                  <tr>
+                    <td>Shipping</td>
+                    <td>Free shipping</td>
+                  </tr>
+                </table><br>
+                <div>
+                  <input type="radio" name="dbt" value="dbt" checked> Direct Bank Transfer
+                </div>
+                <p>
+                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                </p>
+                <div>
+                  <input type="radio" name="dbt" value="cd"> Cash on Delivery
+                </div>
+                <div>
+                  <input type="radio" name="dbt" value="cd"> Paypal <span>
+                  <img src="https://www.logolynx.com/images/logolynx/c3/c36093ca9fb6c250f74d319550acac4d.jpeg" alt="" width="50">
+                  </span>
+                </div>
+                <!-- <button id="place-order-btn" type="submit">Place order</button> -->
+                <input  id="place-order-btn" type="submit" value="Place order">
+               
+
+              </div>
+             </div>
+            </form>
+            
+            
+    </div>
+    
+
+</div>
+ 
+ 
+
+
+  
+    
+    
+    
+
+
+
+    <script src="cart.js"></script>
+</body>
+</html>
